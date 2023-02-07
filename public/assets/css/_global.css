@@ -1,0 +1,29 @@
+h2 {
+    text-align: center;
+    color: var(--color-rubyred);
+    font-size: 2.5rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+html,
+body {
+
+    min-height: 100vh;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    margin-top: auto;
+    background-color: var(--background-color-cultured);
+}
+
+h1 {
+    color: var(--color-lightgray);
+    margin-bottom: 2.5rem;
+}
+
+h5 {
+    margin-bottom: 2rem;
+}

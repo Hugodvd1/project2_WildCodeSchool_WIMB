@@ -1,0 +1,63 @@
+<form class="formSearch mb-5" action="/results" id="form-search">
+	<label class="form-label" for="instrument">Choisissez votre instrument</label>
+	<select class="selectSearch form-select p-3 mb-3" name="instrument" id="instrument">
+		<option value="">-</option>
+		{% for instrument in instruments %}
+			<option value="{{ instrument.id }}" {{ instrument.id == search.instrument ? 'selected' }}>{{instrument.name}}</option>
+		{% endfor %}
+	</select>
+	<label class="form-label" for="level">Choisissez votre niveau</label>
+	{% set levels = [
+		'Initié',
+		'Débutant',
+		'Semi-professionnel',
+        'Professionnel',
+	] %}
+	<select class="selectSearch form-select p-3 mb-3" id="level" name="level">
+		<option value="">-</option>
+		{% for level in levels %}
+			<option value="{{ level }}" {{ level == search.level ? 'selected' }}>{{level}}</option>
+		{% endfor %}
+	</select>
+	<label class="form-label" for="style">Choisissez votre style</label>
+	{% set styles = [
+		'Classique',
+		'Jazz',
+		'Variété française',
+        'Variété internationale',
+		'Musiques du monde ',
+		'Rap',
+		'Musique électronique',
+		'Rock',
+		'Reggae',
+		'Hard Rock',
+		'Heavy Metal',
+        'Soul',
+        'Blues',
+        'Country',
+        'Pop',
+		'R\'n\'B',
+        'Folk',
+		'Alternatif',
+        'Gospel'
+	] %}
+	<select class="selectSearch form-select p-3 mb-3" id="style" name="style">
+		<option value="">-</option>
+		{% for style in styles %}
+			<option value="{{ style }}" {{ style == search.style ? 'selected' }}>{{style}}</option>
+
+
+		{% endfor %}
+	</select>
+	<label class="form-label" for="localisation">Choisissez votre région</label>
+	<select class="selectSearch form-select p-3 mb-3" name="localisation" id="localisation">
+		<option value="">-</option>
+		{% for localisation in localisations %}
+			<option value="{{ localisation.id }}" {{ localisation.id == search.localisation ? 'selected' }}>{{localisation.region}}</option>
+
+		{% endfor %}
+	</select>
+</select>
+<div class="d-flex justify-content-center">
+	<button class="btn btnFilterForm p-3 rounded" type="submit">Let's go!</button>
+</div></form>

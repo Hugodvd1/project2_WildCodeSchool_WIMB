@@ -1,0 +1,22 @@
+.section-container {
+    max-width: 1200px;
+    padding: 20px 30px;
+    margin: 0 auto;
+}
+
+.section-container h2 {
+    text-transform: uppercase;
+    margin: 0px;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}
+
+.section-container .wcs{
+    color: #f76c6c;
+    text-decoration: none;
+}
+
+.section-container .freepik {
+    color: #145DC1;
+    text-decoration: none;
+}
